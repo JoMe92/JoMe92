@@ -1,7 +1,7 @@
 # Jonas Meier  
 **Senior Development Engineer – Machine Learning & Software Engineering**  
 Munich, Germany  
-[LinkedIn](https://www.linkedin.com/in/jonas-meier-b4ba72197/)
+[LinkedIn](https://www.linkedin.com/in/jonas-meier-b4ba72197/) | [Letterboxd](https://letterboxd.com/jonasmeier/) 
 
 ---
 

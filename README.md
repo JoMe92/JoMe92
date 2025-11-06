@@ -85,7 +85,7 @@ My professional interests include:
 - Secured over €500,000 in ZIM/SFF funding  
 - Introduced structured risk and milestone tracking across research partners  
 
-**Arnold & Richter Cine Technik (ARRI)** — *Thesis & R&D Engineer*  
+**Arnold & Richter Cine Technik (ARRI)** — *Thesis*  
 *Oct 2017 – Dec 2020 · Munich*  
 - Bachelor thesis: **3D multi-camera color calibration** for volumetric video  
 - Built automated sensor measurement pipelines in Python  

@@ -4,26 +4,65 @@
 <meta charset="utf-8">
 <title>Profile banner source</title>
 <!-- Editable source of assets/banner-light.png and assets/banner-dark.png.
-     Open in a browser and screenshot each 1200x400 block at 2x with a transparent background to regenerate the PNGs. -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap">
-<style>body{margin:24px;background:#888;display:flex;flex-direction:column;gap:24px}</style>
+     Open in a browser and screenshot each 1280x320 .banner block at 2x to regenerate the PNGs (2560x640). -->
+<style>
+body { margin: 24px; background: #888; display: flex; flex-direction: column; gap: 24px; }
+.banner {
+  --ink: #1c1f23; --accent: #1f4e79; --mid: #4a7fb0; --soft: #9fbdd9; --muted: #6b7280; --rule: #d6dbe1; --bg: #ffffff;
+  position: relative; width: 1280px; height: 320px; box-sizing: border-box; padding: 0 72px;
+  background: var(--bg); color: var(--ink); font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace; overflow: hidden;
+}
+.banner.dark { --ink: #e6edf3; --accent: #79b0e3; --mid: #4a7fb0; --soft: #2f557a; --muted: #8b949e; --rule: #30363d; --bg: #0d1117; }
+.name { position: absolute; left: 72px; top: 62px; font-size: 64px; font-weight: bold; letter-spacing: -1.5px; line-height: 1; }
+.role { position: absolute; left: 72px; top: 144px; font-size: 13px; font-weight: bold; letter-spacing: 2.5px; color: var(--accent); }
+.facts { position: absolute; right: 72px; top: 57px; display: grid; grid-template-columns: auto auto; column-gap: 18px; row-gap: 16.5px; align-items: baseline; }
+.facts dt { font-size: 10px; letter-spacing: 2.2px; color: var(--muted); text-align: right; text-transform: uppercase; }
+.facts dd { margin: 0; font-size: 13px; }
+.pixels { position: absolute; left: 72px; top: 178px; display: grid; grid-template-columns: repeat(90, 6px); grid-auto-rows: 6px; gap: 2px; }
+.pixels i { display: block; }
+.pixels .D { background: var(--accent); } .pixels .M { background: var(--mid); } .pixels .L { background: var(--soft); }
+.dark .pixels .D { background: #2f6aa3; } .dark .pixels .M { background: #5b93c7; } .dark .pixels .L { background: #a7c6e4; }
+.rule { position: absolute; left: 72px; right: 72px; top: 267px; border-top: 1px solid var(--rule); }
+.foot { position: absolute; left: 72px; right: 72px; top: 285px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; letter-spacing: 2.6px; color: var(--muted); }
+.foot .mark { display: inline-flex; gap: 0; margin-right: 12px; vertical-align: middle; }
+.foot .mark i { width: 6px; height: 6px; display: block; }
+</style>
 </head>
 <body>
-<!-- light -->
-<div style="width: 1200px; height: 400px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; background: #ffffff; color: #1f3320; font-family: 'League Gothic', 'Arial Narrow', sans-serif; text-transform: uppercase; overflow: hidden">
-  <div style="font-size: 236px; line-height: 0.84; letter-spacing: 3px; white-space: nowrap">Jonas Meier</div>
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 27px; line-height: 1.1; letter-spacing: 1.2px; white-space: nowrap">
-    <div><span style="font-size: 14px; letter-spacing: 1.6px">vision systems</span> in production&nbsp;&nbsp;&nbsp; <span style="font-size: 14px; letter-spacing: 1.6px">agent tooling</span> Nogging&nbsp;&nbsp;&nbsp; <span style="font-size: 14px; letter-spacing: 1.6px">photo archive</span> Arciva</div>
-    <div><span style="font-size: 14px; letter-spacing: 1.6px">also starring</span> a road bike, a gravel bike <span style="font-size: 14px; letter-spacing: 1.6px">and</span> a camera&nbsp;&nbsp;&nbsp; <span style="font-size: 14px; letter-spacing: 1.6px">on location in</span> Munich</div>
+<template id="banner">
+  <div class="name">Jonas Meier</div>
+  <div class="role">SENIOR MACHINE LEARNING ENGINEER · COMPUTER VISION · CODING AGENTS</div>
+  <dl class="facts">
+    <dt>Vision systems</dt><dd>in production</dd>
+    <dt>Agent tooling</dt><dd>Nogging</dd>
+    <dt>Photo archive</dt><dd>Arciva</dd>
+  </dl>
+  <div class="pixels"></div>
+  <div class="rule"></div>
+  <div class="foot">
+    <span><span class="mark"><i style="background:var(--accent)"></i><i style="background:var(--mid)"></i><i style="background:var(--soft)"></i></span>FROM LIGHT TO PIXELS TO MODELS</span>
+    <span>MUNICH, GERMANY</span>
   </div>
-</div>
-<!-- dark -->
-<div style="width: 1200px; height: 400px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; background: #0d1117; color: #e9efe6; font-family: 'League Gothic', 'Arial Narrow', sans-serif; text-transform: uppercase; overflow: hidden">
-  <div style="font-size: 236px; line-height: 0.84; letter-spacing: 3px; white-space: nowrap">Jonas Meier</div>
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 27px; line-height: 1.1; letter-spacing: 1.2px; white-space: nowrap">
-    <div><span style="font-size: 14px; letter-spacing: 1.6px">vision systems</span> in production&nbsp;&nbsp;&nbsp; <span style="font-size: 14px; letter-spacing: 1.6px">agent tooling</span> Nogging&nbsp;&nbsp;&nbsp; <span style="font-size: 14px; letter-spacing: 1.6px">photo archive</span> Arciva</div>
-    <div><span style="font-size: 14px; letter-spacing: 1.6px">also starring</span> a road bike, a gravel bike <span style="font-size: 14px; letter-spacing: 1.6px">and</span> a camera&nbsp;&nbsp;&nbsp; <span style="font-size: 14px; letter-spacing: 1.6px">on location in</span> Munich</div>
-  </div>
-</div>
+</template>
+<div class="banner light"></div>
+<div class="banner dark"></div>
+<script>
+// Light to pixels: a sensor read-out that dissolves to the right. D/M/L = dark/mid/light blue, "." = empty.
+const rows = [
+  'MLMMLDDD.M.D.DL.MD.L...DL.LD..DL..L.LDLD.........DDD...D....D.........D.................D.',
+  'MDLDL.D...LMDM.MLD.DMD.DDDM.LDM..DM...DD.L....M....M......D...............D...............',
+  'LLMLDDM.DDD.....L.L..D..DMDD..L.DLDD...L......D..L...D........D.D.........................',
+];
+const tpl = document.getElementById('banner');
+for (const el of document.querySelectorAll('.banner')) {
+  el.append(tpl.content.cloneNode(true));
+  const grid = el.querySelector('.pixels');
+  for (const row of rows) for (const c of row) {
+    const i = document.createElement('i');
+    if (c !== '.') i.className = c;
+    grid.append(i);
+  }
+}
+</script>
 </body>
 </html>

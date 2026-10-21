@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-  <img alt="Jonas Meier. Vision systems in production, agent tooling (Nogging), photo archive (Arciva). Also starring a road bike, a gravel bike and a camera. On location in Munich." src="assets/banner-light.png" width="100%">
+  <img alt="Jonas Meier. Senior Machine Learning Engineer, computer vision, coding agents. Vision systems in production, agent tooling (Nogging), photo archive (Arciva). From light to pixels to models. Munich, Germany." src="assets/banner-light.png" width="100%">
 </picture>
 
 Hi, I'm Jonas. Photography came first: I wanted to know how a camera turns light into a picture. That question took me into physics, then to cinema-camera sensors at ARRI, and from there to teaching machines to read images. Today I build computer-vision systems that run in factories, and tooling that lets coding agents do real engineering work. Senior Machine Learning Engineer at an innovation lab in Munich.
